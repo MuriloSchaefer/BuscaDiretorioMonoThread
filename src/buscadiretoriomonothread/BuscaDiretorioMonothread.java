@@ -62,14 +62,11 @@ public class BuscaDiretorioMonothread {
         long tempoInicial = 0;
         long tempoExecucao = 0;
         String palavra = "produto";
-        int nCons = 6;
         File dir = null;
         
         if(args.length>0){
             palavra = args[0];
             dir = new File(args[1]);
-            if(args.length > 2)
-                nCons = Integer.valueOf(args[2]);
         } else{
             //abre a busca do diretorio
             JFileChooser fc = new JFileChooser();
@@ -89,10 +86,10 @@ public class BuscaDiretorioMonothread {
             }
         }
         tempoExecucao = System.currentTimeMillis() - tempoInicial;
-        System.out.println("Encontrados: ");
+        /*System.out.println("Encontrados: ");
         for (File arquivo : encontrados) {
             System.out.println("\t"+arquivo.getPath());
-        }
+        }*/
         System.out.println("Tempo de execucao: "+ tempoExecucao + " ms");
     }
     
