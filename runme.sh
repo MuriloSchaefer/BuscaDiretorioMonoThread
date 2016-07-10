@@ -4,15 +4,15 @@
 MIN_CONS=1
 MAX_CONS=15
 STEP_CONS=3
-DIR=/home/murilo/Área\ de\ Trabalho/Receitas #deve-se alterar na linha 56 também, pois esta com erro, não sei o que é.
-WORD="bololo"
+DIR=/home/murilo/Área\ de\ Trabalho/2\ ano #deve-se alterar na linha 56 também, pois esta com erro, não sei o que é.
+WORD="produto"
 REPEAT=5
 
 function PrintUsage() {
    echo "Argumentos: "
    echo -e "\t -h : ajuda"
    echo -e "\t -w WORD : palavra a ser procurada"
-   echo -e "\t -d DIR : diretorio a ser procurado"
+   echo -e "\t -d DIR : diretorio a ser procurado - não funciona"
    echo -e "\t -r VALUE: quantidade de repetições"
    exit 1
 }
@@ -43,5 +43,5 @@ echo ""
 for (( j=1; j<$REPEAT; j++ ))
 do
 	#java -jar dist/BuscaDiretorioMonothread.jar $WORD $DIR $i
-	java -jar dist/BuscaDiretorioMonothread.jar $WORD /home/murilo/Área\ de\ Trabalho/Receitas $i
+	java -jar dist/BuscaDiretorioMonothread.jar $WORD /home/murilo/2\ ano
 done
