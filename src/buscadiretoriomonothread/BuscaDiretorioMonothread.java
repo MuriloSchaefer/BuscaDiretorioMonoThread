@@ -19,7 +19,10 @@ import javax.swing.JFileChooser;
 public class BuscaDiretorioMonothread {
 
     /**
-     * @param args the command line arguments
+     * @param arquivo
+     * @param palavra
+     * @return 
+     * @throws java.io.FileNotFoundException
      */
     public static boolean pesquisa(File arquivo, String palavra) throws FileNotFoundException{        
         Scanner scanner = new Scanner(arquivo);
@@ -38,11 +41,8 @@ public class BuscaDiretorioMonothread {
             return encontrados;
         }
         
-        File[] fileList = diretorio.listFiles();
-        List<File> arquivos = new ArrayList<>();       
-        for(int i =0 ; i< fileList.length; i++){
-            arquivos.add(fileList[i]);
-        }
+        File[] arquivos = diretorio.listFiles();
+        
         for (File arquivo : arquivos) {
             if(arquivo.isDirectory()){
                 List<File> encontradosSubPasta;

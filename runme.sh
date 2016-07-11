@@ -40,8 +40,8 @@ shift $((OPTIND-1))
 echo ""
 echo "palavra desejada: " $WORD " diretorio: " $DIR
 echo ""
-for (( j=1; j<$REPEAT; j++ ))
+for (( j=1; j<=$REPEAT; j++ ))
 do
 	#java -jar dist/BuscaDiretorioMonothread.jar $WORD $DIR $i
-	java -jar dist/BuscaDiretorioMonothread.jar $WORD /home/murilo/2\ ano
+	java -jar dist/BuscaDiretorioMonothread.jar $WORD /home/murilo/Área\ de\ Trabalho/2\ ano
 done
